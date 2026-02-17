@@ -102,3 +102,19 @@ console.log(userAges.every(age => age >= 18));
 
 //c
 console.log(userAges.some(age => age % 5 ===0));
+
+
+//Section c :Transformation & Reordering
+//Exercises 7: Reversing and Sorting Arrays
+const dataPoints = [42, 10, 500, 2, 77];
+
+//a
+let ascending = [...dataPoints].sort((a,b) => a - b);
+console.log(ascending);
+
+
+//b
+let descending = [...dataPoints].sort((a,b) => b - a);
+console.log(descending);
+let reversed =[...dataPoints].reverse();
+console.log(reversed);
