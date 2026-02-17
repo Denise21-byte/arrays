@@ -136,3 +136,41 @@ console.log(joined);
 //c
 const sliced = sentencesParts.slice(1,4);
 console.log(sliced);
+
+//Exercises 9: Flattening Arrays (flat)
+const nestedArrays = [1, [2, 3], [4, [5, 6]], 7];
+
+//a
+const flattenedOnce = nestedArrays.flat();
+console.log(flattenedOnce);
+
+//b
+const fullyFlattened = nestedArrays.flat(Infinity);
+console.log(fullyFlattened);
+
+//Section D: Functional programming
+//Exercises 10: Mapping and Filtering Arrays
+
+//a
+const pricesUSD = [10.50, 20.00, 5.25];
+const localCurrency = pricesUSD.map(price => price * 5.25);
+console.log(localCurrency);
+
+//b
+const itemPrice = pricesUSD.map(price => "Item price: $xx.xx");
+
+console.log(itemPrice);
+
+//Exercises 11: Filtering Data
+
+//a
+const testScores = [45, 78, 92, 30, 65, 88];
+const passingScores = testScores.filter(score => score >= 70);
+console.log(passingScores);
+
+//b
+const total = testScores.reduce((sum, score) => sum + score, 0);
+const average = total / testScores.length;
+console.log(average);
+
+
