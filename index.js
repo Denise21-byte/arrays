@@ -36,4 +36,24 @@ inventory.splice(1, 1, 25, 35);
 console.log(inventory);
 
 
+//Exercises3: Shallow Copying and the Reference Trap
 
+//a
+const originalScores = [90, 85, 78,];
+
+//b
+const referenceCopy = originalScores; //reference, not a new array
+console.log(referenceCopy);
+
+//c
+referenceCopy[0] = 100;
+console.log("original Scores", originalScores);  //
+console.log("Reference Copy", referenceCopy);
+
+//d
+const spreadCopy = [...originalScores];
+
+//e
+spreadCopy[0] = 50;
+console.log("Original Scores", originalScores);
+console.log("Spread Copy", spreadCopy);
