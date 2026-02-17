@@ -75,3 +75,18 @@ console.log(studentNames.includes("Charlie"));
 //d
 console.log(studentNames.includes("Eve"));
 
+// Exercises 5: Finding Elements with find() and findIndex()
+const products = [
+    {id:1, name: "Laptop", price: 999 },
+    {id:2, name: "Smartphone", price: 499 },
+    {id:3, name: "Tablet", price: 299 },
+    {id:4, name: "Headphones", price: 199 },
+];
+
+//a
+let foundProducts = products.find(product => product.id === 2);
+console.log(foundProducts);
+
+//b
+let foundIndex = products.findIndex(product => product.price > 1000);
+console.log(foundIndex);
