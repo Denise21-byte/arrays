@@ -90,3 +90,15 @@ console.log(foundProducts);
 //b
 let foundIndex = products.findIndex(product => product.price > 1000);
 console.log(foundIndex);
+
+//Exercises 6:Checking Array Integrity (some, every)
+
+//a
+const userAges = [18,24,33,16,40];
+console.log(userAges.some(age => age <18));
+
+//b
+console.log(userAges.every(age => age >= 18));
+
+//c
+console.log(userAges.some(age => age % 5 ===0));
