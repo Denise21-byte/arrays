@@ -173,4 +173,38 @@ const total = testScores.reduce((sum, score) => sum + score, 0);
 const average = total / testScores.length;
 console.log(average);
 
+//Exercises 12: Aggregating Data
+const priceUSD = [10.50, 20.00, 5.25];
 
+//a
+const totalPrice = priceUSD.reduce((sum, price) => sum + price, 0);
+console.log(totalPrice);
+
+//b
+const maxPrice = priceUSD.reduce((max, price) => (price > max ? price : max), priceUSD[0]);
+console.log(maxPrice);
+
+//Section E: Objects Inside Arrays
+//Exercises 13: Sortin objects
+const users = [
+    {name: "Zoe", age: 30},
+    {name: "Adam", age: 25},
+    {name: "Charlie", age: 30},
+];
+
+//a
+const sortedByAge = [...users].sort((a,b) => a.age - b.age);
+console.log(sortedByAge);
+
+//b
+const sortedUsers = [...users].sort((a, b) => {
+  // First: sort by age
+  if (a.age !== b.age) {
+    return a.age - b.age;
+  }
+  
+  // Second: sort by name if ages are equal
+  return a.name.localeCompare(b.name);
+});
+
+console.log(sortedUsers);
