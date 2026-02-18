@@ -208,3 +208,13 @@ const sortedUsers = [...users].sort((a, b) => {
 });
 
 console.log(sortedUsers);
+
+//Exercises 14: Mapping and Filtering Objects
+
+//a
+const userNames = users.map(user => user.name);
+console.log(userNames);
+
+//b
+const usersOver28 = users.filter(user => user.age > 28);
+console.log(usersOver28);
